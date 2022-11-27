@@ -1,29 +1,29 @@
-package org.sf247project;
+package org.sf247.utilites;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.sf247.enumenators.StudyProfile;
+import org.sf247.modelclass.Student;
+import org.sf247.modelclass.University;
 
 import java.io.FileInputStream;
 import java.util.*;
 
 public class GetDataFile {
-    private final XSSFWorkbook workbook;
-    private XSSFSheet sheet;
-    private Iterator<Row> rowIterator;
-    private Row row;
+    static XSSFWorkbook workbook;
+    private static XSSFSheet sheet;
+    private static Iterator<Row> rowIterator;
+    private static Row row;
+    private static FileInputStream fis;
 
-    public GetDataFile() {
+    private GetDataFile() { }
+
+    public static List<Student> getStudent() {
         try {
-            FileInputStream fis = new FileInputStream("G:\\Мой диск\\Java_Idea\\sf_24_7_project\\src\\main\\resources\\universityInfo.xlsx");
+            fis = new FileInputStream("src\\main\\resources\\universityInfo.xlsx");
             workbook = new XSSFWorkbook(fis);
-        } catch (Exception e){
-            throw new RuntimeException(e);
-        }
-    }
 
-    public List<Student> getStudent() {
-        try {
             sheet = workbook.getSheet("Студенты");
             rowIterator = sheet.iterator();
             List<Student> students = new ArrayList<>();
@@ -35,17 +35,16 @@ public class GetDataFile {
                         (int) row.getCell(2).getNumericCellValue(), (float) row.getCell(3).getNumericCellValue()));
             }
             return students;
-//            for (Student str : students){
-//                System.out.println(str);
-//            }
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public List<University> getUniver() {
+    public static List<University> getUniver() {
         try{
+            fis = new FileInputStream("src\\main\\resources\\universityInfo.xlsx");
+            workbook = new XSSFWorkbook(fis);
+
             sheet = workbook.getSheet("Университеты");
             rowIterator = sheet.iterator();
             List<University> universities = new ArrayList<>();

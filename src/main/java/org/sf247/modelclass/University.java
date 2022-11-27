@@ -1,14 +1,16 @@
-package org.sf247project;
+package org.sf247.modelclass;
+
+import org.sf247.enumenators.StudyProfile;
 
 public class University {
-    String id;
-    String fullName;
-    String shortName;
-    int yearOfFoundation;
-    StudyProfile mainProfile;
+    private String universityID;
+    private String fullName;
+    private String shortName;
+    private int yearOfFoundation;
+    private StudyProfile mainProfile;
 
-    public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
-        this.id = id;
+    public University(String universityID, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
+        this.universityID = universityID;
         this.fullName = fullName;
         this.shortName = shortName;
         this.yearOfFoundation = yearOfFoundation;
@@ -18,7 +20,7 @@ public class University {
     @Override
     public String toString() {
         return "University{" +
-                "id='" + id + '\'' +
+                "id='" + universityID + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", shortName='" + shortName + '\'' +
                 ", yearOfFoundation=" + yearOfFoundation +
@@ -26,12 +28,12 @@ public class University {
                 '}';
     }
 
-    public String getId() {
-        return id;
+    public String getUniversityID() {
+        return universityID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUniversityID(String universityID) {
+        this.universityID = universityID;
     }
 
     public String getFullName() {

@@ -1,10 +1,10 @@
-package org.sf247project;
+package org.sf247.modelclass;
 
 public class Student {
-    String fullName;
-    String universityId;
-    int currentCourseNumber;
-    float avgExamScore;
+    private String fullName;
+    private String universityId;
+    private int currentCourseNumber;
+    private float avgExamScore;
 
     public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
         this.fullName = fullName;

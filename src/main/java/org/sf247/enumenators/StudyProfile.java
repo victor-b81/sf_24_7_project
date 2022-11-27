@@ -1,4 +1,4 @@
-package org.sf247project;
+package org.sf247.enumenators;
 
 public enum StudyProfile {
     MEDICINE ("Медицина"),
@@ -9,7 +9,7 @@ public enum StudyProfile {
     MATHEMATICS ("Математика"),
     PHYSICS ("Физика");
 
-    String profileName;
+    private final String profileName;
 
     StudyProfile(String profileName) {
         this.profileName = profileName;     // Передаю строковое значение профиля
