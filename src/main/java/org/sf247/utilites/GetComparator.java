@@ -8,8 +8,8 @@
 package org.sf247.utilites;
 
 import org.sf247.compare.*;
-import enumenators.EnumStudent;
-import enumenators.EnumUniversity;
+import org.sf247.enumenators.EnumStudent;
+import org.sf247.enumenators.EnumUniversity;
 
 public class GetComparator {
     private GetComparator() { }            // согласно заданию блокиную создание экземпл€ров.

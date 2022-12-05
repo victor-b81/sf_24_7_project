@@ -3,7 +3,7 @@
  * Перечисление полей обьекта класса Student
  */
 
-package enumenators;
+package org.sf247.enumenators;
 
 public enum EnumStudent {
     AVG_SCORE,

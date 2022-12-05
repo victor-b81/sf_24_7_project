@@ -5,7 +5,7 @@
 package org.sf247.modelclass;
 
 import com.google.gson.annotations.SerializedName;
-import enumenators.StudyProfile;
+import org.sf247.enumenators.StudyProfile;
 
 public class University {
     @SerializedName(value = "ИД Университета", alternate = "Идентификатор Университета")

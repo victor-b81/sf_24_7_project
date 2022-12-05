@@ -10,8 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.sf247.compare.CompareStudents;
 import org.sf247.compare.CompareUniversity;
-import enumenators.EnumStudent;
-import enumenators.EnumUniversity;
+import org.sf247.enumenators.EnumStudent;
+import org.sf247.enumenators.EnumUniversity;
 import org.sf247.modelclass.Student;
 import org.sf247.modelclass.University;
 import org.sf247.utilites.GetComparator;
@@ -47,6 +47,7 @@ public class Main{
 
         System.out.println(getStudentCollectionJson);
         System.out.println(getUniversityCollectionJson);
+        log.info("Список университетов и студентов преобразован в Json и выведен в консоль");
 
         /*
           Преобразование/десереализация Json в коллекции, по средствам методов утилитарного класса JsonUtil.
@@ -54,17 +55,22 @@ public class Main{
          */
         List<Student> newStudents = JsonUtil.deserializeStudentCollectionJson(getStudentCollectionJson);
         List<University> newUniversities = JsonUtil.deserializeUniversityCollectionJson(getUniversityCollectionJson);
+        log.info("Json объекты университетов и студентов преобразованы в коллекции и выгруженны в новые коллекции");
 
         if ((students.size() == newStudents.size())) {
             System.out.println("Исходная и новая коллекции Students имеют одинаковое количество элентов");
+            log.info("Исходная и новая коллекции Students имеют одинаковое количество элентов");
         } else {
             System.out.println("Исходная и новая коллекции Students имеют разное количество элентов");
+            log.error("Исходная и новая коллекции Students имеют разное количество элентов");
         }
 
         if ((universities.size() == newUniversities.size())) {
             System.out.println("Исходная и новая коллекции Universities имеют одинаковое количество элентов");
+            log.info("Исходная и новая коллекции Universities имеют одинаковое количество элентов");
         } else {
             System.out.println("Исходная и новая коллекции Universities имеют разное количество элентов");
+            log.error("Исходная и новая коллекции Universities имеют разное количество элентов");
         }
 
         /*
@@ -78,6 +84,7 @@ public class Main{
             Student newStudent = JsonUtil.deserializeStudentJson(getStudentJson);
             System.out.println(newStudent);
         });
+        log.info("Преобразование/сереализация и десереализация объектов students в Json и обратно в объекты прошло корректно");
 
         universities.forEach(university -> {
             String getUniversityJson = JsonUtil.serializeUniversityJson(university);
@@ -85,6 +92,6 @@ public class Main{
             University newUniversity = JsonUtil.deserializeUniversityJson(getUniversityJson);
             System.out.println(newUniversity);
         });
-
+        log.info("Преобразование/сереализация и десереализация объектов universities в Json и обратно в объекты прошло корректно");
     }
 }

@@ -3,7 +3,7 @@
  * Перечисление полей обьекта класса University
  */
 
-package enumenators;
+package org.sf247.enumenators;
 
 public enum EnumUniversity {
     FULL_NAME,

@@ -3,7 +3,7 @@
  * Перечисление полей профиля
  */
 
-package enumenators;
+package org.sf247.enumenators;
 
 public enum StudyProfile {
     MEDICINE ("Медицина"),

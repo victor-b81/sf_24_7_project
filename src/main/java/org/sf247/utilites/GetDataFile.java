@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import enumenators.StudyProfile;
+import org.sf247.enumenators.StudyProfile;
 import org.sf247.modelclass.Student;
 import org.sf247.modelclass.University;
 
