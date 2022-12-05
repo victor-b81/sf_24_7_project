@@ -1,3 +1,9 @@
+/**
+ * Класс CompareUniversityFullName зависящий от интерфейса CompareUniversity
+ * с переопределенным методом compare.
+ * Служит для сортировки по имени университета
+ */
+
 package org.sf247.compare;
 
 import org.apache.commons.lang3.StringUtils;

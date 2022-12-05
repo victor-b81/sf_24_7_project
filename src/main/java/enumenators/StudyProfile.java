@@ -1,4 +1,9 @@
-package org.sf247.enumenators;
+/**
+ * Энуменатор StudyProfile
+ * Перечисление полей профиля
+ */
+
+package enumenators;
 
 public enum StudyProfile {
     MEDICINE ("Медицина"),

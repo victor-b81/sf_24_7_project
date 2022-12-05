@@ -1,3 +1,9 @@
+/**
+ * Класс CompareUniversityID зависящий от интерфейса CompareUniversity
+ * с переопределенным методом compare.
+ * Служит для сортировки по id университета
+ */
+
 package org.sf247.compare;
 
 import org.apache.commons.lang3.StringUtils;

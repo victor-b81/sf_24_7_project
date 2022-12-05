@@ -1,3 +1,11 @@
+/**
+ * Утилитарный класс GetDataFile, с заблокированной возможностью создавать экземпляры.
+ * Методы класса:
+ * Публичный getStudent(String path)            Возвращает коллекцию студентов из файла xls, путь к которому передан
+ *                                              в переменной path
+ * Публичный getUniver(String path)             Возвращает коллекцию университетов из файла xls, путь к которому передан
+ *                                              в переменной path
+ */
 package org.sf247.utilites;
 
 import org.apache.logging.log4j.LogManager;
@@ -5,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.sf247.enumenators.StudyProfile;
+import enumenators.StudyProfile;
 import org.sf247.modelclass.Student;
 import org.sf247.modelclass.University;
 
@@ -23,8 +31,13 @@ public class GetDataFile {
     private static Row row;
     private static FileInputStream fis;
     private static final Logger log = LogManager.getLogger(GetDataFile.class);
-    private GetDataFile() { }
 
+    private GetDataFile() { }           // согласно заданию блокиную создание экземпляров.
+
+    /**
+     * Публичный метод getStudent
+     * Принимает адрес файла-справочника в переменной path и возвращает коллекцию students
+     */
     public static List<Student> getStudent(String path) {
         try {
             fis = new FileInputStream(path);
@@ -57,6 +70,10 @@ public class GetDataFile {
         }
     }
 
+    /**
+     * Публичный метод getUniver
+     * Принимает адрес файла-справочника в переменной path и возвращает коллекцию universities
+     */
     public static List<University> getUniver(String path) {
         try{
             fis = new FileInputStream(path);

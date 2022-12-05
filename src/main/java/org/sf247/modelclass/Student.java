@@ -1,9 +1,19 @@
+/**
+ * Модельный класс Student
+ */
+
 package org.sf247.modelclass;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Student {
+    @SerializedName(value = "ФИО", alternate = "Фамилия Имя Отчество")
     private String fullName;
+    @SerializedName(value = "ИД Университета", alternate = "Идентификатор Университета")
     private String universityId;
+    @SerializedName(value = "Текущий курс", alternate = "Номер текущего курса")
     private int currentCourseNumber;
+    @SerializedName(value = "Средний бал", alternate = "Средний бал по экзаменам")
     private float avgExamScore;
 
     public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {

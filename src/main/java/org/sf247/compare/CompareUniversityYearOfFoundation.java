@@ -1,3 +1,9 @@
+/**
+ * Класс CompareUniversityShortName зависящий от интерфейса CompareUniversity
+ * с переопределенным методом compare.
+ * Служит для сортировки по дате основания
+ */
+
 package org.sf247.compare;
 
 import org.sf247.modelclass.University;

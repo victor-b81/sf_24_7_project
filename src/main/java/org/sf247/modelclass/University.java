@@ -1,12 +1,22 @@
+/**
+ * Модельный класс University
+ */
+
 package org.sf247.modelclass;
 
-import org.sf247.enumenators.StudyProfile;
+import com.google.gson.annotations.SerializedName;
+import enumenators.StudyProfile;
 
 public class University {
+    @SerializedName(value = "ИД Университета", alternate = "Идентификатор Университета")
     private String universityID;
+    @SerializedName(value = "Польное название", alternate = "Название университета")
     private String fullName;
+    @SerializedName(value = "Сокращенное название", alternate = "Сокращенное название Университета / Абревиатура")
     private String shortName;
+    @SerializedName(value = "Год основания", alternate = "Год основания Университета")
     private int yearOfFoundation;
+    @SerializedName(value = "Профиль", alternate = "Профиль Университета")
     private StudyProfile mainProfile;
 
     public University(String universityID, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
