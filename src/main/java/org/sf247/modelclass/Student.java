@@ -14,9 +14,9 @@ public class Student {
     @SerializedName(value = "Текущий курс", alternate = "Номер текущего курса")
     private int currentCourseNumber;
     @SerializedName(value = "Средний бал", alternate = "Средний бал по экзаменам")
-    private float avgExamScore;
+    private Double avgExamScore;
 
-    public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
+    public Student(String fullName, String universityId, int currentCourseNumber, Double avgExamScore) {
         this.fullName = fullName;
         this.universityId = universityId;
         this.currentCourseNumber = currentCourseNumber;
@@ -57,11 +57,11 @@ public class Student {
         this.currentCourseNumber = currentCourseNumber;
     }
 
-    public float getAvgExamScore() {
+    public Double getAvgExamScore() {
         return avgExamScore;
     }
 
-    public void setAvgExamScore(float avgExamScore) {
+    public void setAvgExamScore(Double avgExamScore) {
         this.avgExamScore = avgExamScore;
     }
 }

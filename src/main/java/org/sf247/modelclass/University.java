@@ -10,7 +10,7 @@ import org.sf247.enumenators.StudyProfile;
 public class University {
     @SerializedName(value = "ИД Университета", alternate = "Идентификатор Университета")
     private String universityID;
-    @SerializedName(value = "Польное название", alternate = "Название университета")
+    @SerializedName(value = "Полное название", alternate = "Название университета")
     private String fullName;
     @SerializedName(value = "Сокращенное название", alternate = "Сокращенное название Университета / Абревиатура")
     private String shortName;

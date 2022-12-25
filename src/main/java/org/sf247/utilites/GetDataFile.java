@@ -51,7 +51,7 @@ public class GetDataFile {
             while (rowIterator.hasNext()) {
                 row = rowIterator.next();
                 students.add(new Student(row.getCell(1).getStringCellValue(), row.getCell(0).getStringCellValue(),
-                        (int) row.getCell(2).getNumericCellValue(), (float) row.getCell(3).getNumericCellValue()));
+                        (int) row.getCell(2).getNumericCellValue(), row.getCell(3).getNumericCellValue()));
             }
             log.info("Список студентов извелечен из файла");
             return students;
