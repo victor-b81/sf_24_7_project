@@ -2,9 +2,57 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2022-12-27T14:58:56.554100700Z</date>
-  <millis>1672153136554</millis>
-  <nanos>100700</nanos>
+  <date>2022-12-27T18:33:36.730901500Z</date>
+  <millis>1672166016730</millis>
+  <nanos>901500</nanos>
+  <sequence>5</sequence>
+  <logger>org.sf247.Main</logger>
+  <level>INFO</level>
+  <class>org.sf247.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Коллекции students и universities успешно получены из файла src\main\resources\universityInfo.xlsx</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:36.732899600Z</date>
+  <millis>1672166016732</millis>
+  <nanos>899600</nanos>
+  <sequence>6</sequence>
+  <logger>org.sf247.Main</logger>
+  <level>INFO</level>
+  <class>org.sf247.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Получаем коллекцию общую statisticsCollection из коллекций students и universities</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:36.743900700Z</date>
+  <millis>1672166016743</millis>
+  <nanos>900700</nanos>
+  <sequence>7</sequence>
+  <logger>org.sf247.utilites.GetStatistics</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.GetStatistics</class>
+  <method>collectStatistics</method>
+  <thread>1</thread>
+  <message>Получены коллекции students и universities</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:36.744900800Z</date>
+  <millis>1672166016744</millis>
+  <nanos>900800</nanos>
+  <sequence>8</sequence>
+  <logger>org.sf247.utilites.GetStatistics</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.GetStatistics</class>
+  <method>collectStatistics</method>
+  <thread>1</thread>
+  <message>Получаю статистику studentStat и univerStat из полученных коллекций students и universities</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:36.745900700Z</date>
+  <millis>1672166016745</millis>
+  <nanos>900700</nanos>
   <sequence>9</sequence>
   <logger>org.sf247.utilites.GetStatistics</logger>
   <level>INFO</level>
@@ -14,9 +62,9 @@
   <message>Возвращаю статистику collectUniverStatistic в univerStat</message>
 </record>
 <record>
-  <date>2022-12-27T14:58:56.557102300Z</date>
-  <millis>1672153136557</millis>
-  <nanos>102300</nanos>
+  <date>2022-12-27T18:33:36.747900300Z</date>
+  <millis>1672166016747</millis>
+  <nanos>900300</nanos>
   <sequence>10</sequence>
   <logger>org.sf247.utilites.GetStatistics</logger>
   <level>INFO</level>
@@ -26,9 +74,9 @@
   <message>Возвращаю статистику collectStudentStatistic в studentStat</message>
 </record>
 <record>
-  <date>2022-12-27T14:58:56.558100800Z</date>
-  <millis>1672153136558</millis>
-  <nanos>100800</nanos>
+  <date>2022-12-27T18:33:36.748901600Z</date>
+  <millis>1672166016748</millis>
+  <nanos>901600</nanos>
   <sequence>11</sequence>
   <logger>org.sf247.utilites.GetStatistics</logger>
   <level>INFO</level>
@@ -38,9 +86,9 @@
   <message>Формирую общую статистику statisticsCollection из studentStat и univerStat</message>
 </record>
 <record>
-  <date>2022-12-27T14:58:56.564101100Z</date>
-  <millis>1672153136564</millis>
-  <nanos>101100</nanos>
+  <date>2022-12-27T18:33:36.754901200Z</date>
+  <millis>1672166016754</millis>
+  <nanos>901200</nanos>
   <sequence>12</sequence>
   <logger>org.sf247.utilites.GetStatistics</logger>
   <level>INFO</level>
@@ -50,9 +98,9 @@
   <message>Возвращаю статистику statisticsCollection вызывающему обьекту</message>
 </record>
 <record>
-  <date>2022-12-27T14:58:56.565101200Z</date>
-  <millis>1672153136565</millis>
-  <nanos>101200</nanos>
+  <date>2022-12-27T18:33:36.755901500Z</date>
+  <millis>1672166016755</millis>
+  <nanos>901500</nanos>
   <sequence>13</sequence>
   <logger>org.sf247.Main</logger>
   <level>INFO</level>
@@ -62,9 +110,9 @@
   <message>Коллекция statisticsCollection успешно получена из коллекций students и universities</message>
 </record>
 <record>
-  <date>2022-12-27T14:58:56.565101200Z</date>
-  <millis>1672153136565</millis>
-  <nanos>101200</nanos>
+  <date>2022-12-27T18:33:36.755901500Z</date>
+  <millis>1672166016755</millis>
+  <nanos>901500</nanos>
   <sequence>14</sequence>
   <logger>org.sf247.Main</logger>
   <level>INFO</level>
@@ -72,65 +120,5 @@
   <method>main</method>
   <thread>1</thread>
   <message>Коллекция statisticsCollection передана в класс XlsWriter для записи в файлsrc\main\resources\statistics.xlsx</message>
-</record>
-<record>
-  <date>2022-12-27T14:58:56.570101500Z</date>
-  <millis>1672153136570</millis>
-  <nanos>101500</nanos>
-  <sequence>15</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
-  <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
-  <thread>1</thread>
-  <message>Коллекция statisticsCollection получена успешно</message>
-</record>
-<record>
-  <date>2022-12-27T14:58:56.571101500Z</date>
-  <millis>1672153136571</millis>
-  <nanos>101500</nanos>
-  <sequence>16</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
-  <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
-  <thread>1</thread>
-  <message>Фомирую шапку таблици</message>
-</record>
-<record>
-  <date>2022-12-27T14:58:56.703112600Z</date>
-  <millis>1672153136703</millis>
-  <nanos>112600</nanos>
-  <sequence>17</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
-  <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
-  <thread>1</thread>
-  <message>Фомирую вывод статистики</message>
-</record>
-<record>
-  <date>2022-12-27T14:58:56.866264400Z</date>
-  <millis>1672153136866</millis>
-  <nanos>264400</nanos>
-  <sequence>18</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
-  <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
-  <thread>1</thread>
-  <message>Вывод в фаил подготовлен</message>
-</record>
-<record>
-  <date>2022-12-27T14:58:57.022278400Z</date>
-  <millis>1672153137022</millis>
-  <nanos>278400</nanos>
-  <sequence>19</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
-  <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
-  <thread>1</thread>
-  <message>Данные сохранены в фаил успешно</message>
 </record>
 </log>

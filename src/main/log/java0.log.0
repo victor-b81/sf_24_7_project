@@ -1,4 +1,64 @@
 <?xml version="1.0" encoding="windows-1251" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
+<record>
+  <date>2022-12-27T18:33:36.792904100Z</date>
+  <millis>1672166016792</millis>
+  <nanos>904100</nanos>
+  <sequence>15</sequence>
+  <logger>org.sf247.utilites.XlsWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.XlsWriter</class>
+  <method>writeToFile</method>
+  <thread>1</thread>
+  <message>Коллекция statisticsCollection получена успешно</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:36.794905200Z</date>
+  <millis>1672166016794</millis>
+  <nanos>905200</nanos>
+  <sequence>16</sequence>
+  <logger>org.sf247.utilites.XlsWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.XlsWriter</class>
+  <method>writeToFile</method>
+  <thread>1</thread>
+  <message>Фомирую шапку таблици</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:36.946916200Z</date>
+  <millis>1672166016946</millis>
+  <nanos>916200</nanos>
+  <sequence>17</sequence>
+  <logger>org.sf247.utilites.XlsWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.XlsWriter</class>
+  <method>writeToFile</method>
+  <thread>1</thread>
+  <message>Фомирую вывод статистики</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:37.109043400Z</date>
+  <millis>1672166017109</millis>
+  <nanos>43400</nanos>
+  <sequence>18</sequence>
+  <logger>org.sf247.utilites.XlsWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.XlsWriter</class>
+  <method>writeToFile</method>
+  <thread>1</thread>
+  <message>Вывод в фаил подготовлен</message>
+</record>
+<record>
+  <date>2022-12-27T18:33:37.238053600Z</date>
+  <millis>1672166017238</millis>
+  <nanos>53600</nanos>
+  <sequence>19</sequence>
+  <logger>org.sf247.utilites.XlsWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.utilites.XlsWriter</class>
+  <method>writeToFile</method>
+  <thread>1</thread>
+  <message>Данные сохранены в фаил успешно</message>
+</record>
 </log>
