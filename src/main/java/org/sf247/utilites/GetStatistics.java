@@ -15,20 +15,31 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Level;
 
 public class GetStatistics {
-
+    private static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(GetStatistics.class.getName()); // подключение логирования
     private GetStatistics() {}
 
-    /** Метод collectStatistics
-     * служит для создания коллекции из принятых колекций collectStudent и collectUniversity
-     * и возвращает коллекцию statisticsCollection
+    /** открытый Метод collectStatistics
+     * Принимает колекции collectStudent и collectUniversity
+     * Служит для формирования статистических данных:
+     * - Список полных названий университетов
+     * - Количество университетов
+     * - ID университетов
+     * - Количество учеников
+     * - Средний бал по экзаменам
+     * Указанные поля возвращаются в коллекции statisticsCollection
+     * @return statisticsCollection
      */
     public static List<Statistics> collectStatistics(List<Student> collectStudent, List<University> collectUniversity){
+        log.log(Level.INFO,"Получены коллекции students и universities");
         List<Statistics> statisticsCollection = new ArrayList<>();
+        log.log(Level.INFO,"Получаю статистику studentStat и univerStat из полученных коллекций students и universities");
         HashMap<String, HashMap<String, String>> univerStat = getUniverStatistic(collectUniversity);
         HashMap<String, HashMap<String, String>> studentStat = getStudentStatistic(collectStudent, univerStat.get("IDsUniver"));
 
+        log.log(Level.INFO,"Формирую общую статистику statisticsCollection из studentStat и univerStat");
         HashMap<String, String> mainProfile = univerStat.get("IDsUniver");
         HashMap<String, String> fullUniverName = univerStat.get("ListUniver");
         HashMap<String, String> mainProfileUniverCount = univerStat.get("CountUniver");
@@ -40,16 +51,17 @@ public class GetStatistics {
                 mainProfileStudentCount.get(kMainProfile),
                 mainProfileUniverCount.get(kMainProfile),
                 fullUniverName.get(kMainProfile))));
-
+        log.log(Level.INFO,"Возвращаю статистику statisticsCollection вызывающему обьекту");
         return statisticsCollection;
     }
 
     /** Приватный метод getUniverStatistic
      * Возвращает список названия университетов и их количество согласно профиля
      * Взвращаемые данные:
-     * Список полных названий университетов согласно профиля
-     * Количество университетов согласно профиля
-     * ID университетов
+     * universityNamesHashMap - Список полных названий университетов согласно профиля
+     * countUniversityNames - Количество университетов согласно профиля
+     * universityIDs - ID университетов
+     * Указанные поля возвращаются в коллекции collectUniverStatistic
      * @return collectUniverStatistic
      */
     private static HashMap<String, HashMap<String, String>> getUniverStatistic(List<University> collectUniversity){
@@ -86,14 +98,16 @@ public class GetStatistics {
         collectUniverStatistic.put("ListUniver", universityNamesHashMap);
         collectUniverStatistic.put("CountUniver", countUniversityNames);
         collectUniverStatistic.put("IDsUniver", universityIDs);
+        log.log(Level.INFO,"Возвращаю статистику collectUniverStatistic в univerStat");
         return collectUniverStatistic;
     }
 
     /** Приватный метод getStudentStatistic
      * Возвращает Средний бал по экзаменам и количество учеников согласно профиля
      * Взвращаемые данные:
-     * countStudetsProfile - количество учеников согласно профиля
-     * avgExamScoreProfile - средний бал по экзаменам согласно профиля
+     * countStudetsProfile - Количество учеников согласно профиля
+     * avgExamScoreProfile - Средний бал по экзаменам согласно профиля
+     * Указанные поля возвращаются в коллекции collectStudentStatistic
      * @return collectStudentStatistic
      */
     private static HashMap<String, HashMap<String, String>> getStudentStatistic(List<Student> collectStudent, HashMap<String, String> univerIDs){
@@ -112,7 +126,11 @@ public class GetStatistics {
                     if (s.equals(listCS.getUniversityId())) {
                         cStudetsProfile++;
                         checkAvgExamScore = Optional.ofNullable(listCS.getAvgExamScore());
-                        getAvgExamScore = (getAvgExamScore+checkAvgExamScore.get())/cStudetsProfile;
+                        if (checkAvgExamScore.isPresent()){
+                            getAvgExamScore = (getAvgExamScore+checkAvgExamScore.get())/cStudetsProfile;
+                        } else {
+                            getAvgExamScore = getAvgExamScore/cStudetsProfile;
+                        }
                     }
                 }
                 bdAvgExamScore = new BigDecimal(String.valueOf(getAvgExamScore));
@@ -128,5 +146,6 @@ public class GetStatistics {
         });
         collectStudentStatistic.put("CountStudets", countStudetsProfile);
         collectStudentStatistic.put("avgExamScore", avgExamScoreProfile);
+        log.log(Level.INFO,"Возвращаю статистику collectStudentStatistic в studentStat");
         return collectStudentStatistic;}
 }

@@ -8,8 +8,6 @@
  */
 package org.sf247.utilites;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -23,17 +21,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class GetDataFile {
-    static XSSFWorkbook workbook;
+    private static XSSFWorkbook workbook;
     private static XSSFSheet sheet;
     private static Iterator<Row> rowIterator;
     private static Row row;
     private static FileInputStream fis;
-    private static final Logger log = LogManager.getLogger(GetDataFile.class);
+    private static final Logger log = Logger.getLogger(GetDataFile.class.getName()); // подключение логирования
 
     private GetDataFile() { }           // согласно заданию блокиную создание экземпляров.
-
     /**
      * Публичный метод getStudent
      * Принимает адрес файла-справочника в переменной path и возвращает коллекцию students
@@ -42,7 +41,6 @@ public class GetDataFile {
         try {
             fis = new FileInputStream(path);
             workbook = new XSSFWorkbook(fis);
-
             sheet = workbook.getSheet("Студенты");
             rowIterator = sheet.iterator();
             List<Student> students = new ArrayList<>();
@@ -53,19 +51,20 @@ public class GetDataFile {
                 students.add(new Student(row.getCell(1).getStringCellValue(), row.getCell(0).getStringCellValue(),
                         (int) row.getCell(2).getNumericCellValue(), row.getCell(3).getNumericCellValue()));
             }
-            log.info("Список студентов извелечен из файла");
+            log.log(Level.INFO,"Список студентов извелечен из файла и передан в вызывающий обьект");
             return students;
         } catch (FileNotFoundException e) {
-            log.error("Фаил " + path + " необнаружен");
+            log.log(Level.SEVERE, "Фаил " + path + " необнаружен");
             throw new RuntimeException();
         } catch (Exception e) {
-            log.error("Неизестная ошибка");
+            log.log(Level.SEVERE, "Ошибка" + e.getMessage());
             throw new RuntimeException();
         } finally {
             try {
+                log.log(Level.INFO,"Закрываю файл " + path);
                 fis.close();
             } catch (IOException e) {
-                System.out.println("Немогу закрыть фаил, т.к. он не открыт");
+                log.log(Level.WARNING, "Немогу закрыть файл, возможно он занят либо не открыт");
             }
         }
     }
@@ -89,19 +88,20 @@ public class GetDataFile {
                 universities.add(new University(row.getCell(0).getStringCellValue(), row.getCell(1).getStringCellValue(),
                         row.getCell(2).getStringCellValue(), (int) row.getCell(3).getNumericCellValue(), StudyProfile.valueOf(row.getCell(4).getStringCellValue())));
             }
-            log.info("Список университетов извелечен из файла");
+            log.log(Level.INFO,"Список университетов извелечен из файла и передан в вызывающий класс");
             return universities;
         } catch (FileNotFoundException e) {
-            log.error("Фаил " + path + " необнаружен");
+            log.log(Level.SEVERE, "Фаил " + path + " необнаружен");
             throw new RuntimeException();
         } catch (Exception e) {
-            log.error("Неизестная ошибка");
+            log.log(Level.SEVERE, "Ошибка" + e.getMessage());
             throw new RuntimeException();
         } finally {
             try {
+                log.log(Level.INFO,"Закрываю файл " + path);
                 fis.close();
             } catch (IOException e) {
-                System.out.println("Немогу закрыть фаил, т.к. он не открыт");
+                log.log(Level.WARNING, "Немогу закрыть файл, возможно он занят либо не открыт");
             }
         }
     }

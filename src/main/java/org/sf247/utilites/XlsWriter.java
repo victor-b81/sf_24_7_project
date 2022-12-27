@@ -4,8 +4,6 @@
 
 package org.sf247.utilites;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -15,13 +13,16 @@ import org.sf247.modelclass.Statistics;
 import java.awt.*;
 import java.io.FileOutputStream;
 import java.util.List;
+import java.util.logging.Level;
 
 public class XlsWriter {
 
-    private static final Logger log = LogManager.getLogger(GetDataFile.class); // подключение логирования
+    private static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(XlsWriter.class.getName()); // подключение логирования
 
     /** Метод writeToFile
      * Сохранение в фаил
+     * Получает обьекты statisticsCollection и path
+     * и сохраняет в фаил path
      */
     public static void writeToFile (List<Statistics> statisticsCollection, String path){
         /* Блок переменных
@@ -42,7 +43,8 @@ public class XlsWriter {
 
         /* Тело программы
          * */
-        log.info("Коллекция получена успешно");
+        log.log(Level.INFO,"Коллекция statisticsCollection получена успешно");
+        log.log(Level.INFO,"Фомирую шапку таблици");
 
         workbook = new XSSFWorkbook();
         sheet = workbook.createSheet("Статистика");
@@ -84,6 +86,7 @@ public class XlsWriter {
         headCellFullUniverName.setCellValue("Полное название университетов");
         headCellFullUniverName.setCellStyle(headStyle);
 
+        log.log(Level.INFO,"Фомирую вывод статистики");
         for (Statistics str : statisticsCollection){
             dataRow = sheet.createRow(rowCount);
             dataCellMainProfile = dataRow.createCell(0);
@@ -100,15 +103,15 @@ public class XlsWriter {
         }
 
         for (int i=0; i<5; i++) {sheet.autoSizeColumn(i);}
-        log.info("Вывод в фаил подготовлен");
+        log.log(Level.INFO,"Вывод в фаил подготовлен");
 
         try {
             fos = new FileOutputStream(path);
             workbook.write(fos);
             fos.close();
-            log.info("Данные сохранены в фаил");
+            log.log(Level.INFO,"Данные сохранены в фаил успешно");
         } catch (Exception e) {
-            log.error("Ошибка сохранения в фаил");
+            log.log(Level.SEVERE,"Ошибка сохранения в фаил");
             throw new RuntimeException("failure", e);
         }
     }
