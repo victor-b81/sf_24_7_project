@@ -7,15 +7,26 @@ package org.sf247.modelclass;
 import com.google.gson.annotations.SerializedName;
 import org.sf247.enumenators.StudyProfile;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class University {
+    @XmlElement(name = "universityId")
     @SerializedName(value = "ИД Университета", alternate = "Идентификатор Университета")
     private String universityID;
+    @XmlElement(name = "universityName")
     @SerializedName(value = "Полное название", alternate = "Название университета")
     private String fullName;
+    @XmlTransient
     @SerializedName(value = "Сокращенное название", alternate = "Сокращенное название Университета / Абревиатура")
     private String shortName;
+    @XmlTransient
     @SerializedName(value = "Год основания", alternate = "Год основания Университета")
     private int yearOfFoundation;
+    @XmlElement(name = "universityProfile")
     @SerializedName(value = "Профиль", alternate = "Профиль Университета")
     private StudyProfile mainProfile;
 

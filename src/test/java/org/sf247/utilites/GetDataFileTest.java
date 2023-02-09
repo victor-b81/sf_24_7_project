@@ -1,7 +1,5 @@
 package org.sf247.utilites;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class GetDataFileTest {
     String filePath = "src\\main\\resources\\universityInfo.xlsx";
 

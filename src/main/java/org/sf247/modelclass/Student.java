@@ -6,13 +6,20 @@ package org.sf247.modelclass;
 
 import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.*;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
+    @XmlElement(name = "studentName")
     @SerializedName(value = "ФИО", alternate = "Фамилия Имя Отчество")
     private String fullName;
+    @XmlElement(name = "universityId")
     @SerializedName(value = "ИД Университета", alternate = "Идентификатор Университета")
     private String universityId;
+    @XmlTransient
     @SerializedName(value = "Текущий курс", alternate = "Номер текущего курса")
     private int currentCourseNumber;
+    @XmlElement(name = "avgScore")
     @SerializedName(value = "Средний бал", alternate = "Средний бал по экзаменам")
     private Double avgExamScore;
 
