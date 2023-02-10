@@ -63,8 +63,7 @@ public class JsonWriter {
         String studentsJson = JsonUtil.serializeListToJson(fullInfo.getStudentList());
         try {
             logger.log(Level.INFO, "Записываю JSON файл students");
-            FileOutputStream outputStream =
-                    new FileOutputStream(path);
+            FileOutputStream outputStream = new FileOutputStream(path);
             outputStream.write(studentsJson.getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Ошибка записи JSON файла students", e);
@@ -78,8 +77,7 @@ public class JsonWriter {
         String universitiesJson = JsonUtil.serializeListToJson(fullInfo.getUniversityList());
         try {
             logger.log(Level.INFO, "Записываю JSON файл universities");
-            FileOutputStream outputStream =
-                    new FileOutputStream(path);
+            FileOutputStream outputStream = new FileOutputStream(path);
             outputStream.write(universitiesJson.getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Ошибка записи JSON файла universities", e);
@@ -93,8 +91,7 @@ public class JsonWriter {
         String studentsJson = JsonUtil.serializeListToJson(fullInfo.getStatisticsList());
         try {
             logger.log(Level.INFO, "Записываю JSON файл statistics");
-            FileOutputStream outputStream =
-                    new FileOutputStream(path);
+            FileOutputStream outputStream = new FileOutputStream(path);
             outputStream.write(studentsJson.getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Ошибка записи JSON файла statistics", e);
