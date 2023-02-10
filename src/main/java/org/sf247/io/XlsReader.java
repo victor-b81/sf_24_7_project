@@ -6,7 +6,7 @@
  * Публичный getUniver(String path)             Возвращает коллекцию университетов из файла xls, путь к которому передан
  *                                              в переменной path
  */
-package org.sf247.utilites;
+package org.sf247.io;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -24,15 +24,15 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class GetDataFile {
+public class XlsReader {
     private static XSSFWorkbook workbook;
     private static XSSFSheet sheet;
     private static Iterator<Row> rowIterator;
     private static Row row;
     private static FileInputStream fis;
-    private static final Logger log = Logger.getLogger(GetDataFile.class.getName()); // подключение логирования
+    private static final Logger log = Logger.getLogger(XlsReader.class.getName()); // подключение логирования
 
-    private GetDataFile() { }           // согласно заданию блокиную создание экземпляров.
+    private XlsReader() { }           // согласно заданию блокиную создание экземпляров.
     /**
      * Публичный метод getStudent
      * Принимает адрес файла-справочника в переменной path и возвращает коллекцию students

@@ -2,7 +2,7 @@
  * Служит для принятия коллекции Statistics и сохранения ее в фаил
  */
 
-package org.sf247.utilites;
+package org.sf247.io;
 
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
@@ -24,7 +24,7 @@ public class XlsWriter {
      * Получает обьекты statisticsCollection и path
      * и сохраняет в фаил path
      */
-    public static void writeToFile (List<Statistics> statisticsCollection, String path){
+    public static void writeToXLSfile(List<Statistics> statisticsCollection, String path){
         /* Блок переменных
          * */
         int rowCount = 1;

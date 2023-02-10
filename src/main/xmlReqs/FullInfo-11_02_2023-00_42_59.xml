@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <studentsInfo>
+        <studentEntry>
+            <studentName>Иванов И. А.</studentName>
+            <universityId>0002-high</universityId>
+            <avgScore>4.0</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Козлов М. В.</studentName>
+            <universityId>0002-high</universityId>
+            <avgScore>4.6</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Фёдоров А. И.</studentName>
+            <universityId>0002-high</universityId>
+            <avgScore>4.2</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Игнатьев М. М.</studentName>
+            <universityId>0003-high</universityId>
+            <avgScore>4.3</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Соколов В. В.</studentName>
+            <universityId>0004-high</universityId>
+            <avgScore>4.8</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Сидоров Е. Г.</studentName>
+            <universityId>0004-high</universityId>
+            <avgScore>3.9</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Витальев В. А.</studentName>
+            <universityId>0001-high</universityId>
+            <avgScore>4.0</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Петров П. А.</studentName>
+            <universityId>0001-high</universityId>
+            <avgScore>5.0</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Алексеев С. В.</studentName>
+            <universityId>0001-high</universityId>
+            <avgScore>5.0</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Иванов А. Г.</studentName>
+            <universityId>0001-high</universityId>
+            <avgScore>4.8</avgScore>
+        </studentEntry>
+        <studentEntry>
+            <studentName>Васильев В. П.</studentName>
+            <universityId>0001-high</universityId>
+            <avgScore>4.7</avgScore>
+        </studentEntry>
+    </studentsInfo>
+    <universitiesInfo>
+        <universityEntry>
+            <universityId>0001-high</universityId>
+            <universityName>Московский Выдуманный Университет</universityName>
+            <universityProfile>PHYSICS</universityProfile>
+        </universityEntry>
+        <universityEntry>
+            <universityId>0002-high</universityId>
+            <universityName>Московский Придуманный Институт</universityName>
+            <universityProfile>PHYSICS</universityProfile>
+        </universityEntry>
+        <universityEntry>
+            <universityId>0003-high</universityId>
+            <universityName>Московский Государственный Медицинский Университет</universityName>
+            <universityProfile>MEDICINE</universityProfile>
+        </universityEntry>
+        <universityEntry>
+            <universityId>0004-high</universityId>
+            <universityName>Тамбовский Университет Медицины</universityName>
+            <universityProfile>MEDICINE</universityProfile>
+        </universityEntry>
+        <universityEntry>
+            <universityId>0005-high</universityId>
+            <universityName>Самарский Медицинский Институт</universityName>
+            <universityProfile>MEDICINE</universityProfile>
+        </universityEntry>
+        <universityEntry>
+            <universityId>0006-high</universityId>
+            <universityName>Воронежский Литературно-Переводческий Университет</universityName>
+            <universityProfile>LINGUISTICS</universityProfile>
+        </universityEntry>
+        <universityEntry>
+            <universityId>0007-high</universityId>
+            <universityName>Казанский Университет Вычислений</universityName>
+            <universityProfile>MATHEMATICS</universityProfile>
+        </universityEntry>
+    </universitiesInfo>
+    <statisticalInfo>
+        <statisticsEntry>
+            <avgExamScore>0.63</avgExamScore>
+            <fullUniverName>Московский Выдуманный Университет, Московский Придуманный Институт</fullUniverName>
+            <mainProfile>Физика</mainProfile>
+            <mainProfileStudentCount>8</mainProfileStudentCount>
+            <mainProfileUniverCount>2</mainProfileUniverCount>
+        </statisticsEntry>
+        <statisticsEntry>
+            <avgExamScore>Нет Студентов</avgExamScore>
+            <fullUniverName>Воронежский Литературно-Переводческий Университет</fullUniverName>
+            <mainProfile>Лингвистика</mainProfile>
+            <mainProfileStudentCount>Нет Студентов</mainProfileStudentCount>
+            <mainProfileUniverCount>1</mainProfileUniverCount>
+        </statisticsEntry>
+        <statisticsEntry>
+            <avgExamScore>Нет Студентов</avgExamScore>
+            <fullUniverName>Казанский Университет Вычислений</fullUniverName>
+            <mainProfile>Математика</mainProfile>
+            <mainProfileStudentCount>Нет Студентов</mainProfileStudentCount>
+            <mainProfileUniverCount>1</mainProfileUniverCount>
+        </statisticsEntry>
+        <statisticsEntry>
+            <avgExamScore>2.82</avgExamScore>
+            <fullUniverName>Московский Государственный Медицинский Университет, Тамбовский Университет Медицины, Самарский Медицинский Институт</fullUniverName>
+            <mainProfile>Медицина</mainProfile>
+            <mainProfileStudentCount>3</mainProfileStudentCount>
+            <mainProfileUniverCount>3</mainProfileUniverCount>
+        </statisticsEntry>
+    </statisticalInfo>
+    <processedAt>2023-02-11T00:42:59.021+03:00</processedAt>
+</root>

@@ -7,7 +7,7 @@ package org.sf247.modelclass;
 import com.google.gson.annotations.SerializedName;
 
 public class Statistics {
-    @SerializedName(value = "Профиль обучения", alternate = "Профиль обучения")
+    @SerializedName(value = "Профиль обучения", alternate = "Профиль обучения университета")
     private String mainProfile;
     @SerializedName(value = "Средний бал", alternate = "Средний бал по экзаменам")
     private String avgExamScore;

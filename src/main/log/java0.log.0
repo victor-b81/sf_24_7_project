@@ -2,63 +2,111 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2022-12-27T18:33:36.792904100Z</date>
-  <millis>1672166016792</millis>
-  <nanos>904100</nanos>
-  <sequence>15</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
+  <date>2023-02-10T21:42:59.220457200Z</date>
+  <millis>1676065379220</millis>
+  <nanos>457200</nanos>
+  <sequence>22</sequence>
+  <logger>org.sf247.io.XmlWriter</logger>
   <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
+  <class>org.sf247.io.XmlWriter</class>
+  <method>writeXmlFile</method>
   <thread>1</thread>
-  <message>Коллекция statisticsCollection получена успешно</message>
+  <message>Пробую создать директорию xmlReqs</message>
 </record>
 <record>
-  <date>2022-12-27T18:33:36.794905200Z</date>
-  <millis>1672166016794</millis>
-  <nanos>905200</nanos>
-  <sequence>16</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
+  <date>2023-02-10T21:42:59.221455300Z</date>
+  <millis>1676065379221</millis>
+  <nanos>455300</nanos>
+  <sequence>23</sequence>
+  <logger>org.sf247.io.XmlWriter</logger>
   <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
+  <class>org.sf247.io.XmlWriter</class>
+  <method>writeXmlFile</method>
   <thread>1</thread>
-  <message>Фомирую шапку таблици</message>
+  <message>Директория xmlReqs создана успешно</message>
 </record>
 <record>
-  <date>2022-12-27T18:33:36.946916200Z</date>
-  <millis>1672166016946</millis>
-  <nanos>916200</nanos>
-  <sequence>17</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
+  <date>2023-02-10T21:42:59.235456400Z</date>
+  <millis>1676065379235</millis>
+  <nanos>456400</nanos>
+  <sequence>24</sequence>
+  <logger>org.sf247.io.XmlWriter</logger>
   <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
+  <class>org.sf247.io.XmlWriter</class>
+  <method>writeXmlFile</method>
   <thread>1</thread>
-  <message>Фомирую вывод статистики</message>
+  <message>Процесс записи файла XML окончен</message>
 </record>
 <record>
-  <date>2022-12-27T18:33:37.109043400Z</date>
-  <millis>1672166017109</millis>
-  <nanos>43400</nanos>
-  <sequence>18</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
+  <date>2023-02-10T21:42:59.237457500Z</date>
+  <millis>1676065379237</millis>
+  <nanos>457500</nanos>
+  <sequence>25</sequence>
+  <logger>org.sf247.io.JsonWriter</logger>
   <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
+  <class>org.sf247.io.JsonWriter</class>
+  <method>writeJsonFile</method>
   <thread>1</thread>
-  <message>Вывод в фаил подготовлен</message>
+  <message>Пробую создать директорию jsonReqs</message>
 </record>
 <record>
-  <date>2022-12-27T18:33:37.238053600Z</date>
-  <millis>1672166017238</millis>
-  <nanos>53600</nanos>
-  <sequence>19</sequence>
-  <logger>org.sf247.utilites.XlsWriter</logger>
+  <date>2023-02-10T21:42:59.238458300Z</date>
+  <millis>1676065379238</millis>
+  <nanos>458300</nanos>
+  <sequence>26</sequence>
+  <logger>org.sf247.io.JsonWriter</logger>
   <level>INFO</level>
-  <class>org.sf247.utilites.XlsWriter</class>
-  <method>writeToFile</method>
+  <class>org.sf247.io.JsonWriter</class>
+  <method>writeJsonFile</method>
   <thread>1</thread>
-  <message>Данные сохранены в фаил успешно</message>
+  <message>Директория jsonReqs создана успешно</message>
+</record>
+<record>
+  <date>2023-02-10T21:42:59.298462400Z</date>
+  <millis>1676065379298</millis>
+  <nanos>462400</nanos>
+  <sequence>27</sequence>
+  <logger>org.sf247.io.JsonWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.io.JsonWriter</class>
+  <method>writeStudentsToJsonFile</method>
+  <thread>1</thread>
+  <message>Записываю JSON файл students</message>
+</record>
+<record>
+  <date>2023-02-10T21:42:59.301461800Z</date>
+  <millis>1676065379301</millis>
+  <nanos>461800</nanos>
+  <sequence>28</sequence>
+  <logger>org.sf247.io.JsonWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.io.JsonWriter</class>
+  <method>writeUniversitiesToJsonFile</method>
+  <thread>1</thread>
+  <message>Записываю JSON файл universities</message>
+</record>
+<record>
+  <date>2023-02-10T21:42:59.303462600Z</date>
+  <millis>1676065379303</millis>
+  <nanos>462600</nanos>
+  <sequence>29</sequence>
+  <logger>org.sf247.io.JsonWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.io.JsonWriter</class>
+  <method>writeStatisticsToJsonFile</method>
+  <thread>1</thread>
+  <message>Записываю JSON файл statistics</message>
+</record>
+<record>
+  <date>2023-02-10T21:42:59.304461100Z</date>
+  <millis>1676065379304</millis>
+  <nanos>461100</nanos>
+  <sequence>30</sequence>
+  <logger>org.sf247.io.JsonWriter</logger>
+  <level>INFO</level>
+  <class>org.sf247.io.JsonWriter</class>
+  <method>writeJsonFile</method>
+  <thread>1</thread>
+  <message>Процесс записи файлов JSON окончен</message>
 </record>
 </log>

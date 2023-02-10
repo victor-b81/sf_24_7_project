@@ -1,15 +1,17 @@
 package org.sf247.utilites;
 
+import org.sf247.io.XlsReader;
+
 class GetDataFileTest {
     String filePath = "src\\main\\resources\\universityInfo.xlsx";
 
     @org.junit.jupiter.api.Test
     void getStudent() {
-        GetDataFile.getStudent(filePath);
+        XlsReader.getStudent(filePath);
     }
 
     @org.junit.jupiter.api.Test
     void getUniver() {
-        GetDataFile.getUniver(filePath);
+        XlsReader.getUniver(filePath);
     }
 }

@@ -18,6 +18,13 @@ public class JsonUtil {
     private JsonUtil(){}            // согласно заданию блокиную создание экземпл€ров.
 
     /**
+     * serializeListToJson - универсальный метод сериализации обьектов и колекций в Json
+     */
+    public static String serializeListToJson(List<?> list) {
+        return new GsonBuilder().setPrettyPrinting().create().toJson(list);
+    }
+
+    /**
      * ћетоды сериализации обьектов и колекций в Json
      *
      * serializeStudentJson                 сериализаци€ обьекта student в Json
@@ -66,5 +73,4 @@ public class JsonUtil {
     public static List<University> deserializeUniversityCollectionJson (String jsonUniversities){
         return new Gson().fromJson(jsonUniversities, new TypeToken<List<University>>(){}.getType());
     }
-
 }

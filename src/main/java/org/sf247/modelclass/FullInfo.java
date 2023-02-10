@@ -1,3 +1,8 @@
+/**
+ * Модельный класс FullInfo
+ * служит для получения полных колекций из классов Student, University, Statistics
+ */
+
 package org.sf247.modelclass;
 
 import javax.xml.bind.annotation.*;
@@ -23,8 +28,7 @@ public class FullInfo {
     @XmlElement(name = "processedAt")
     private Date processDate;
 
-    public FullInfo() {
-    }
+    public FullInfo() {}
 
     public List<Student> getStudentList() {
         return studentList;
